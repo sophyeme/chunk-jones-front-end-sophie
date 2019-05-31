@@ -1,5 +1,6 @@
 import React from 'react';
 import './class_template.css';
+import Navigation from '../Navigation'
 
 class Class_template_form extends React.Component {
   state = {
@@ -29,7 +30,8 @@ onSubmit = (e) => {
   render() {
     return(
     <div>
-      <h1> Create a new Teacher_Template Object </h1>
+      <Navigation />
+      <h1> Create a new Class_Template Object </h1>
       <form>
         <input
           name = "class_title"

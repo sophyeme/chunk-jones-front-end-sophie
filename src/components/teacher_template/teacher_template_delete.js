@@ -1,5 +1,6 @@
 import React from 'react';
 import './teacher_template.css';
+import Navigation from '../Navigation'
 
 class Teacher_template_form_delete extends React.Component {
   state = {
@@ -23,6 +24,7 @@ onSubmit = (e) => {
   render() {
     return(
     <div>
+      <Navigation />
       <h1> Delete a existing Program_Template Object </h1>
       <form>
         <input

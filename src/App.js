@@ -6,7 +6,7 @@ import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import Homepage from './components/pages/homePage';
 //import { Router } from "react-router"; 
-import { Link,NavLink, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Link,NavLink, Route, BrowserRouter as Router , Redirect} from 'react-router-dom';
 //require('./menu-frame.css');
 import ProgramTemplateForm from './components/program_template/program_template_create';
 import TeacherTemplateForm from './components/teacher_template/teacher_template_create';
@@ -17,6 +17,14 @@ import * as ROUTES from './components/Constants/routes'
 
 
 class App extends Component {
+  state = {
+    loggedIn : false
+  }
+  myCallback = (dataFromChild) => {
+    // this.setState({loggedIn:dataFromChild})
+    console.log(dataFromChild)
+    
+}
   render() {
     return (
       
@@ -31,18 +39,25 @@ class App extends Component {
 
       // </div>
       // <Login></Login>
+      <div>
+         {/* <Login></Login> */}
+      
       <Router>
         <div>
           {/* <Navigation /> */}
-          <Login></Login>
+          {/* <Login></Login> */}
           <hr />
 
           {/* <Route exact path={ROUTES.LANDING} component={LandingPage} /> */}
           {/* <Route path={ROUTES.SIGN_IN} component={SignInPage} /> */}
-          <Route exact path={ROUTES.ptf} component={ProgramTemplateForm} />
+          
+          <Route path='/' component={Login} />
+          {/* <Route path='/login' render = {} />  */}
+          {/* <Route exact path={ROUTES.ptf} component={ProgramTemplateForm} />
           <Route exact path={ROUTES.ttf} component={TeacherTemplateForm} />
-          <Route exact path={ROUTES.ctf} component={ClassTemplateForm} />
+          <Route exact path={ROUTES.ctf} component={ClassTemplateForm} /> */}
         </div>
+        
         
       {/* <div > */}
         {/* <Navbar>
@@ -67,6 +82,8 @@ class App extends Component {
         <Route path="/onemore" exact component={Onemore} /> */}
       {/* </div> */}
     </Router>
+    {/* <div><Login callbackFromParent={this.myCallback} ></Login></div> */}
+    </div>
     );
   }
   

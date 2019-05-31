@@ -1,10 +1,9 @@
 import React from 'react';
-import './program_template.css';
-import Navigation from '../Navigation'
+import './live_class_template.css';
 
-class Program_template_form_delete extends React.Component {
+class Live_class_template_form_delete extends React.Component {
   state = {
-    program_id: "",
+    live_class_template_id: "",
   }
 
 change = (e) => {
@@ -17,24 +16,24 @@ onSubmit = (e) => {
   e.preventDefault();
   console.log(this.state);
   this.setState({
-    program_id: "",
+    live_class_template_id: "",
   })
 };
 
   render() {
     return(
     <div>
-      <Navigation />
-      <h1> Delete a existing Program_Template Object </h1>
+      <h1> Delete a existing Live Class Template Object </h1>
       <form>
         <input
-          name = "program_id"
-          placeholder="Program ID"
-          value = {this.state.program_id}
+          name = "live_class_template_id"
+          placeholder="Live Class Template ID"
+          value = {this.state.live_class_template_id}
           onChange={e => this.change(e)}
         />
         <br />
         <button onClick={e => this.onSubmit(e)}>Submit</button>
+        <br />
       </form>
     </div>
     );
@@ -44,4 +43,4 @@ onSubmit = (e) => {
 
 }
 
-export default Program_template_form_delete;
+export default Live_class_template_form_delete;

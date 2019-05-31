@@ -7,6 +7,14 @@ import Header from '../headerComponent/header';
 import Homepage from '../pages/homePage';
 import Footer from '../footerComponent/footer';
 import Navigation from '../Navigation';
+import * as ROUTES from '../Constants/routes';
+import { Link,NavLink, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
+import ProgramTemplateForm from '../program_template/program_template_create';
+import TeacherTemplateForm from '../teacher_template/teacher_template_create';
+import ClassTemplateForm from '../class_template/class_template_create';
+import ProgramTemplateFormDelete from '../program_template/program_template_delete';
+import TeacherTemplateFormDelete from '../teacher_template/teacher_template_delete';
+import ClassTemplateFormDelete from '../class_template/class_template_delete';
 require('./login.css');
 
 
@@ -77,6 +85,10 @@ class LoginPage extends React.Component{
       </Container>
     )
   }
+  someFn = () =>{
+    
+    this.props.callbackFromParent(this.state.routeToHome);
+}
   
   render(){
     return (
@@ -84,13 +96,28 @@ class LoginPage extends React.Component{
         { !this.state.routeToHome && this.renderLogin()}
         {this.state.routeToHome && 
           <div>
-            {/* <Header></Header> */}
-            {/* <Homepage></Homepage>
-            <Footer></Footer> */}
-            <Navigation />
+            <Router>
+            <Route exact path="/" render={() => (
+            this.state.routeToHome ? (
+              <Redirect to="/home"/>
+            ) : (
+              <Redirect to="/"/>
+            )
+          )}/>
+          <Route exact path={ROUTES.HOME} component={Navigation} />
+          <Route exact path={ROUTES.ptf} component={ProgramTemplateForm} />
+          <Route exact path={ROUTES.ttf} component={TeacherTemplateForm} />
+          <Route exact path={ROUTES.ctf} component={ClassTemplateForm} />
+          <Route exact path={ROUTES.ptfd} component={ProgramTemplateFormDelete} />
+          <Route exact path={ROUTES.ttfd} component={TeacherTemplateFormDelete} />
+          <Route exact path={ROUTES.ctfd} component={ClassTemplateFormDelete} />
+          </Router>
+          
+            
             
           </div>
         }
+        
       </div>
       
       

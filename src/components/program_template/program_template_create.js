@@ -1,5 +1,6 @@
 import React from 'react';
 import './program_template.css';
+import Navigation from '../Navigation'
 
 class ProgramTemplateForm extends React.Component {
   state = {
@@ -29,6 +30,7 @@ onSubmit = (e) => {
   render() {
     return(
     <div>
+      <Navigation />
       <h1> Create a new Program_Template Object </h1>
       <form>
         <input
