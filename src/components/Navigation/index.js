@@ -35,6 +35,10 @@ const Navigation = () => (
           <NavDropdown.Divider />
 
           <NavDropdown.Item eventKey="deleteProgram"><Link to={ROUTES.ptfd}>Delete Program template form</Link></NavDropdown.Item>
+
+           <NavDropdown.Divider />
+
+          <NavDropdown.Item eventKey="ProgramHome"><Link to={ROUTES.ptf}>Programs </Link></NavDropdown.Item>
          
         </NavDropdown>
 
@@ -44,6 +48,10 @@ const Navigation = () => (
           <NavDropdown.Divider />
 
            <NavDropdown.Item eventKey="createTeacher"> <Link to={ROUTES.ttfd}>Delete Teacher template form</Link></NavDropdown.Item>
+
+            <NavDropdown.Divider />
+
+            <NavDropdown.Item eventKey="TeacherHome"> <Link to={ROUTES.ttf}>Teachers</Link></NavDropdown.Item>
          
         </NavDropdown>
 
@@ -53,6 +61,10 @@ const Navigation = () => (
           <NavDropdown.Divider />
 
           <NavDropdown.Item eventKey="createClass"> <Link to={ROUTES.ctfd}>Delete Class template form</Link></NavDropdown.Item>
+
+          <NavDropdown.Divider />
+
+          <NavDropdown.Item eventKey="ClassHome"> <Link to={ROUTES.ctf}>Classes </Link></NavDropdown.Item>
          
         </NavDropdown>
 
@@ -62,7 +74,11 @@ const Navigation = () => (
           <NavDropdown.Divider />
 
           <NavDropdown.Item eventKey="deleteliveProgram"> <Link to={ROUTES.lptd}>Delete Live Program template form</Link></NavDropdown.Item>
-         
+
+          <NavDropdown.Divider />
+
+          <NavDropdown.Item eventKey="liveProgramHome"> <Link to={ROUTES.lpt}>Live Programs</Link></NavDropdown.Item>
+        
         </NavDropdown>
 
         <NavDropdown title="Live Class" id="nav-dropdown-class">
@@ -71,6 +87,10 @@ const Navigation = () => (
           <NavDropdown.Divider />
 
           <NavDropdown.Item eventKey="deleteliveClass"> <Link to={ROUTES.lctd}>Delete Live Class template form</Link></NavDropdown.Item>
+
+          <NavDropdown.Divider />
+
+          <NavDropdown.Item eventKey="liveClassHome"> <Link to={ROUTES.lct}>Live Classes</Link></NavDropdown.Item>
          
         </NavDropdown>
       </Nav>

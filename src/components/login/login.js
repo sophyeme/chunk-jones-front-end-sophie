@@ -9,9 +9,12 @@ import Footer from '../footerComponent/footer';
 import Navigation from '../Navigation';
 import * as ROUTES from '../Constants/routes';
 import { Link,NavLink, Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
-import ProgramTemplateForm from '../program_template/program_template_create';
-import TeacherTemplateForm from '../teacher_template/teacher_template_create';
-import ClassTemplateForm from '../class_template/class_template_create';
+import ProgramTemplateFormCreate from '../program_template/program_template_create';
+import TeacherTemplateFormCreate from '../teacher_template/teacher_template_create';
+import ClassTemplateFormCreate from '../class_template/class_template_create';
+import ProgramTemplateFormHome from '../program_template/program_template_home';
+import TeacherTemplateFormHome from '../teacher_template/teacher_template_home';
+import ClassTemplateFormHome from '../class_template/class_template_home';
 import ProgramTemplateFormDelete from '../program_template/program_template_delete';
 import TeacherTemplateFormDelete from '../teacher_template/teacher_template_delete';
 import ClassTemplateFormDelete from '../class_template/class_template_delete';
@@ -19,6 +22,9 @@ import liveProgramTemplateFormCreate from '../live_program_template/live_program
 import liveProgramTemplateFormDelete from '../live_program_template/live_program_template_delete';
 import liveClassTemplateFormCreate from '../live_class_template/live_class_template_create';
 import liveClassTemplateFormDelete from '../live_class_template/live_class_template_delete';
+import liveProgramTemplateFormHome from '../live_program_template/live_program_template_home';
+import liveClassTemplateFormHome from '../live_class_template/live_class_template_home';
+
 require('./login.css');
 
 
@@ -109,9 +115,12 @@ class LoginPage extends React.Component{
             )
           )}/>
           <Route exact path={ROUTES.HOME} component={Navigation} />
-          <Route exact path={ROUTES.ptfc} component={ProgramTemplateForm} />
-          <Route exact path={ROUTES.ttfc} component={TeacherTemplateForm} />
-          <Route exact path={ROUTES.ctfc} component={ClassTemplateForm} />
+          <Route exact path={ROUTES.ptf} component={ProgramTemplateFormHome} />
+          <Route exact path={ROUTES.ttf} component={TeacherTemplateFormHome} />
+          <Route exact path={ROUTES.ctf} component={ClassTemplateFormHome} />
+          <Route exact path={ROUTES.ptfc} component={ProgramTemplateFormCreate} />
+          <Route exact path={ROUTES.ttfc} component={TeacherTemplateFormCreate} />
+          <Route exact path={ROUTES.ctfc} component={ClassTemplateFormCreate} />
           <Route exact path={ROUTES.ptfd} component={ProgramTemplateFormDelete} />
           <Route exact path={ROUTES.ttfd} component={TeacherTemplateFormDelete} />
           <Route exact path={ROUTES.ctfd} component={ClassTemplateFormDelete} />
@@ -119,6 +128,8 @@ class LoginPage extends React.Component{
           <Route exact path={ROUTES.lptd} component={liveProgramTemplateFormDelete} />
           <Route exact path={ROUTES.lctc} component={liveClassTemplateFormCreate} />
           <Route exact path={ROUTES.lctd} component={liveClassTemplateFormDelete} />
+          <Route exact path={ROUTES.lpt} component={liveProgramTemplateFormHome} />
+          <Route exact path={ROUTES.lct} component={liveClassTemplateFormHome} />
           </Router>
           
             
