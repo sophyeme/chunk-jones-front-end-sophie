@@ -1,5 +1,6 @@
 import React from 'react';
 import './live_class_template.css';
+import Navigation from '../Navigation'
 
 class Live_class_template_form_delete extends React.Component {
   state = {
@@ -23,6 +24,7 @@ onSubmit = (e) => {
   render() {
     return(
     <div>
+      <Navigation />
       <h1> Delete a existing Live Class Template Object </h1>
       <form>
         <input

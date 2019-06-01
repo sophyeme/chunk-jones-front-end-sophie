@@ -30,7 +30,7 @@ const Navigation = () => (
    <Nav variant="pills" >
         
         <NavDropdown title="Program" id="nav-dropdown-program" >
-          <NavDropdown.Item eventKey="createProgram"><Link to={ROUTES.ptf}>Create Program template form</Link></NavDropdown.Item>
+          <NavDropdown.Item eventKey="createProgram"><Link to={ROUTES.ptfc}>Create Program template form</Link></NavDropdown.Item>
           
           <NavDropdown.Divider />
 
@@ -39,7 +39,7 @@ const Navigation = () => (
         </NavDropdown>
 
         <NavDropdown title="Teacher" id="nav-dropdown-teacher">
-          <NavDropdown.Item eventKey="createTeacher"> <Link to={ROUTES.ttf}>Create Teacher template form</Link></NavDropdown.Item>
+          <NavDropdown.Item eventKey="createTeacher"> <Link to={ROUTES.ttfc}>Create Teacher template form</Link></NavDropdown.Item>
           
           <NavDropdown.Divider />
 
@@ -48,11 +48,29 @@ const Navigation = () => (
         </NavDropdown>
 
         <NavDropdown title="Class" id="nav-dropdown-class">
-          <NavDropdown.Item eventKey="createClass"> <Link to={ROUTES.ctf}>Create Class template form</Link></NavDropdown.Item>
+          <NavDropdown.Item eventKey="createClass"> <Link to={ROUTES.ctfc}>Create Class template form</Link></NavDropdown.Item>
           
           <NavDropdown.Divider />
 
           <NavDropdown.Item eventKey="createClass"> <Link to={ROUTES.ctfd}>Delete Class template form</Link></NavDropdown.Item>
+         
+        </NavDropdown>
+
+        <NavDropdown title="Live Program" id="nav-dropdown-class">
+          <NavDropdown.Item eventKey="createliveProgram"> <Link to={ROUTES.lptc}>Create Live Program template form</Link></NavDropdown.Item>
+          
+          <NavDropdown.Divider />
+
+          <NavDropdown.Item eventKey="deleteliveProgram"> <Link to={ROUTES.lptd}>Delete Live Program template form</Link></NavDropdown.Item>
+         
+        </NavDropdown>
+
+        <NavDropdown title="Live Class" id="nav-dropdown-class">
+          <NavDropdown.Item eventKey="createliveClass"> <Link to={ROUTES.lctc}>Create Live Class template form</Link></NavDropdown.Item>
+          
+          <NavDropdown.Divider />
+
+          <NavDropdown.Item eventKey="deleteliveClass"> <Link to={ROUTES.lctd}>Delete Live Class template form</Link></NavDropdown.Item>
          
         </NavDropdown>
       </Nav>

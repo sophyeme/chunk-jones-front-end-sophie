@@ -1,5 +1,6 @@
 import React from 'react';
 import './live_program_template.css';
+import Navigation from '../Navigation'
 
 class Live_program_template_form_delete extends React.Component {
   state = {
@@ -23,6 +24,7 @@ onSubmit = (e) => {
   render() {
     return(
     <div>
+      <Navigation />
       <h1> Delete a existing Live Program Template Object </h1>
       <form>
         <input
