@@ -46,8 +46,10 @@ onSubmit = (e) => {
     <div>
       <Navigation />
       <h1> Create a new Teacher_Template Object </h1>
-      <img id='ttcimage' src={require('../assets/bugsBunnyArtist.png')} alt=''></img>
-      <div id='watermarkedttc'>
+      <div id='ttcimage_wrapper'>
+        <img id='ttcimage' src={require('../assets/bugsBunnyArtist.png')} alt=''></img>
+      </div>
+      <div id='ttcform'>
       <Form>
         <Row>
           <Col md={6}>

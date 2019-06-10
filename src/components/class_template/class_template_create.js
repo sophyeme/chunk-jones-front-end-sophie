@@ -31,10 +31,13 @@ onSubmit = (e) => {
 
   render() {
     return(
-      <div>
+      <div id='page'>
       <Navigation />
       <h1> Create a new Class_Template Object</h1>
-      <img id='ctcimage' src={require('../assets/bugsBunnyCarrot.png')} alt=''></img>
+      <div id='ctcimage_wrapper'>
+        <img id='ctcimage' src={require('../assets/bugsBunnyCarrot.png')} alt=''></img>
+      </div>
+      <div id='form'>
       <Form>
         <Row form>
           <Col md={12}>
@@ -96,7 +99,7 @@ onSubmit = (e) => {
  
         <button onClick={e => this.onSubmit(e)}>Submit</button>
       </Form>
- 
+      </div>
     </div>
     );
   }

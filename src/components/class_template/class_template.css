@@ -35,6 +35,10 @@ li a:hover {
   background-color: #111;
 }
 
-#ctcimage{
+#page{
+  text-align: center;
+}
+#ctcimage_wrapper, #form{
   display: inline-block;
+  vertical-align: top;
 }
