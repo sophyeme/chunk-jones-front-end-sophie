@@ -1,6 +1,7 @@
 import React from 'react';
 import './live_program_template.css';
 import Navigation from '../Navigation'
+import axios from 'axios'
 
 class Live_program_template_form_delete extends React.Component {
   state = {
@@ -16,6 +17,17 @@ change = (e) => {
 onSubmit = (e) => {
   e.preventDefault();
   console.log(this.state);
+
+  axios.delete("http://looneyteamapi.herokuapp.com/liveprogram" + this.state.live_program_template_id, {
+    data: { live_program_template_id:this.live_program_template_id, }
+  },{headers: {'Accept': 'application/json'}})
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+ 
   this.setState({
     live_program_template_id: "",
   })

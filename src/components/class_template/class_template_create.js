@@ -34,7 +34,7 @@ onSubmit = (e) => {
       <div>
       <Navigation />
       <h1> Create a new Class_Template Object</h1>
- 
+      <img id='ctcimage' src={require('../assets/bugsBunnyCarrot.png')} alt=''></img>
       <Form>
         <Row form>
           <Col md={12}>

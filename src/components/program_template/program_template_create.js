@@ -2,6 +2,7 @@ import React from 'react';
 import './program_template.css';
 import Navigation from '../Navigation'
 import {Container, Row, Col, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import {Form as ReactForm} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
 
 class ProgramTemplateForm extends React.Component {
@@ -31,7 +32,7 @@ onSubmit = (e) => {
 
   render() {
     return(
-      <div>
+    <div id='program_template_create'>
       <Navigation />
       <h1> Create a new Program_Template Object </h1>
       <Form>
@@ -75,6 +76,10 @@ onSubmit = (e) => {
         <br/>
         <button onClick={e => this.onSubmit(e)}>Submit</button>
       </Form>
+      <br/>
+      <div id='footer'>
+        <img src={require('../assets/bugsBunny.png')} alt='' width='200px' height='100px'></img>
+      </div>
     </div>
     );
   }

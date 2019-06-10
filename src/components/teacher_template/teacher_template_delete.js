@@ -1,5 +1,6 @@
 import React from 'react';
 import './teacher_template.css';
+import axios from 'axios'
 import Navigation from '../Navigation'
 
 class Teacher_template_form_delete extends React.Component {
@@ -16,8 +17,19 @@ change = (e) => {
 onSubmit = (e) => {
   e.preventDefault();
   console.log(this.state);
+
+  axios.delete("http://looneyteamapi.herokuapp.com/teachers/" + this.state.teacher_id, {
+    data: { teacher_id:this.teacher_id, }
+  },{headers: {'Accept': 'application/json'}})
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+ 
   this.setState({
-    program_id: "",
+    teacher_id: "",
   })
 };
 
@@ -26,6 +38,7 @@ onSubmit = (e) => {
     <div>
       <Navigation />
       <h1> Delete a existing Teacher_Template Object </h1>
+      <div id='watermarkedttd'>
       <form>
         <input
           name = "teacher_id"
@@ -37,6 +50,7 @@ onSubmit = (e) => {
         <button onClick={e => this.onSubmit(e)}>Submit</button>
         <br />
       </form>
+      </div>
     </div>
     );
   }

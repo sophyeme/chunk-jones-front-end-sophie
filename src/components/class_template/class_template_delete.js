@@ -1,6 +1,7 @@
 import React from 'react';
 import './class_template.css';
 import Navigation from '../Navigation'
+import axios from 'axios'
 
 class Class_template_form_delete extends React.Component {
   state = {
@@ -16,11 +17,21 @@ change = (e) => {
 onSubmit = (e) => {
   e.preventDefault();
   console.log(this.state);
+
+  axios.delete("http://looneyteamapi.herokuapp.com/class_template" + this.state.class_template_id, {
+    data: { class_template_id:this.class_template_id, }
+  },{headers: {'Accept': 'application/json'}})
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+ 
   this.setState({
-    program_id: "",
+    class_template_id: "",
   })
 };
-
   render() {
     return(
     <div>

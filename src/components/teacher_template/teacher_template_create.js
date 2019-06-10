@@ -1,12 +1,9 @@
 import React from 'react';
 import './teacher_template.css';
-import axios from 'axios'
+import Navigation from '../Navigation'
 import {Container, Row, Col, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.css";
-import Navigation from '../Navigation'
- 
- 
- 
+
 class Teacher_template_form extends React.Component {
   state = {
     first_name: "",
@@ -20,35 +17,16 @@ class Teacher_template_form extends React.Component {
     level: "",
     address: "",
   }
- 
+
 change = (e) => {
   this.setState({
     [e.target.name]: e.target.value
   });
 };
- 
+
 onSubmit = (e) => {
   e.preventDefault();
   console.log(this.state);
-  axios.post('http://looneyteamapi.herokuapp.com/teachers', {
-    first_name: this.first_name,
-    last_name: this.last_name,
-    username: this.username,
-    password: this.password,
-    email: this.email ,
-    verified: this.verified,
-    skills: this.skills,
-    specialty: this.specialty,
-    level: this.level,
-    address: this.address,
-  },{headers: {'Accept': 'application/json'}})
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
- 
   this.setState({
     first_name: "",
     last_name: "",
@@ -62,13 +40,14 @@ onSubmit = (e) => {
     address: "",
   })
 };
- 
- 
+
   render() {
     return(
-      <div>
+    <div>
       <Navigation />
       <h1> Create a new Teacher_Template Object </h1>
+      <img id='ttcimage' src={require('../assets/bugsBunnyArtist.png')} alt=''></img>
+      <div id='watermarkedttc'>
       <Form>
         <Row>
           <Col md={6}>
@@ -106,7 +85,7 @@ onSubmit = (e) => {
           <Label>Username</Label>
           <Input
             name = "username"
-            //placeholder="Username"
+            placeholder="Username"
             value = {this.state.username}
             onChange={e => this.change(e)}
           />
@@ -115,7 +94,7 @@ onSubmit = (e) => {
           <Label>Password</Label>
           <Input
             name = "password"
-            //placeholder="Password"
+            placeholder="Password"
             value = {this.state.password}
             onChange={e => this.change(e)}
           />
@@ -165,7 +144,7 @@ onSubmit = (e) => {
             />
           </Col>
         </Row>
- 
+
         <Label>Level</Label>
         <Input
           name = "level"
@@ -176,13 +155,15 @@ onSubmit = (e) => {
         <br />
         <button onClick={e => this.onSubmit(e)}>Submit</button>
       </Form>
+      <br/>
+      <text>Warner Bros. Trademarked</text>
+      </div>
     </div>
-    
     );
   }
- 
- 
- 
+
+
+
 }
- 
+
 export default Teacher_template_form;
