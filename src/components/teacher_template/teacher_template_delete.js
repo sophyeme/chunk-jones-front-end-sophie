@@ -38,7 +38,8 @@ onSubmit = (e) => {
     <div>
       <Navigation />
       <h1> Delete a existing Teacher_Template Object </h1>
-      <div id='watermarkedttd'>
+      <img id='ctdimage' src={require('../assets/elmerFudd.png')} alt=''></img>
+      <div>
       <form>
         <input
           name = "teacher_id"

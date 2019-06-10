@@ -38,8 +38,8 @@ onSubmit = (e) => {
     <div>
       <Navigation />
       <h1> Delete a existing Program_Template Object </h1>
-      <div id='watermarkedptd'>
-      {/*<img id='ptdimage' src={require('../assets/gossamer1.png')} alt='decorative'></img>*/}
+      <div>
+      <img id='ptdimage' src={require('../assets/gossamer1.png')} alt='decorative'></img>
       <br/>
       <form>
         <input
