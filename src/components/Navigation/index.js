@@ -53,6 +53,10 @@ const Navigation = () => (
             <NavDropdown.Divider />
 
             <NavDropdown.Item eventKey="TeacherHome"> <Link to={ROUTES.ttf}>Teachers</Link></NavDropdown.Item>
+
+            <NavDropdown.Divider />
+
+            <NavDropdown.Item eventKey="TeacherUnavailability"> <Link to={ROUTES.ttu}>Teacher Unavailability</Link></NavDropdown.Item>
          
         </NavDropdown>
 
