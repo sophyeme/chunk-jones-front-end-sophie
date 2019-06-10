@@ -37,18 +37,23 @@ onSubmit = (e) => {
     return(
     <div>
       <Navigation />
-      <h1> Delete a existing Live Program Template Object </h1>
-      <form>
-        <input
-          name = "live_program_template_id"
-          placeholder="Live Program ID"
-          value = {this.state.live_program_template_id}
-          onChange={e => this.change(e)}
-        />
-        <br />
-        <button onClick={e => this.onSubmit(e)}>Submit</button>
-        <br />
-      </form>
+      <div id='lptdpage'>
+        <h1> Delete a existing Live Program Template Object </h1>
+        <img id='lptdimage' src={require('../assets/coyote.png')} alt=''></img>
+        <div id='lptdform'>
+          <form>
+            <input
+              name = "live_program_template_id"
+              placeholder="Live Program ID"
+              value = {this.state.live_program_template_id}
+              onChange={e => this.change(e)}
+            />
+            <br />
+            <button onClick={e => this.onSubmit(e)}>Submit</button>
+            <br />
+          </form>
+        </div>
+      </div>
     </div>
     );
   }

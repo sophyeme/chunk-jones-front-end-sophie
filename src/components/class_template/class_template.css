@@ -35,6 +35,7 @@ li a:hover {
   background-color: #111;
 }
 
+<<<<<<< Updated upstream
 #page{
   text-align: center;
 }
@@ -42,3 +43,13 @@ li a:hover {
   display: inline-block;
   vertical-align: top;
 }
+=======
+#ctcpage, #ctdpage{
+  text-align: center;
+}
+#ctcimage, #ctcform{
+  display: inline-block;
+  vertical-align: top;
+}
+
+>>>>>>> Stashed changes

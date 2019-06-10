@@ -30,15 +30,18 @@ li a:hover {
 background-color: #111;
 }
 
+<<<<<<< Updated upstream
 #form{
   
 }
 #ttcimage_wrapper, div#form{
 float: left;
+=======
+#ttcpage{
+  text-align: center;
+>>>>>>> Stashed changes
 }
-#watermarkedttd{
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../assets/ElmerFudd.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 500px;
+#ttcimage, #ttcform{
+  display: inline-block;
+  vertical-align: top;
 }
