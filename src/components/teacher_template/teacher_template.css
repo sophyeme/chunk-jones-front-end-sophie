@@ -30,16 +30,8 @@ li a:hover {
 background-color: #111;
 }
 
-<<<<<<< Updated upstream
-#form{
-  
-}
-#ttcimage_wrapper, div#form{
-float: left;
-=======
 #ttcpage{
   text-align: center;
->>>>>>> Stashed changes
 }
 #ttcimage, #ttcform{
   display: inline-block;

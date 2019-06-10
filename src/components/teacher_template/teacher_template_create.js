@@ -45,17 +45,6 @@ onSubmit = (e) => {
     return(
     <div>
       <Navigation />
-<<<<<<< Updated upstream
-      <h1> Create a new Teacher_Template Object </h1>
-      <div id='ttcimage_wrapper'>
-        <img id='ttcimage' src={require('../assets/bugsBunnyArtist.png')} alt=''></img>
-      </div>
-      <div id='ttcform'>
-      <Form>
-        <Row>
-          <Col md={6}>
-            <Label>First Name</Label>
-=======
       <div id='ttcpage'>
         <h1> Create a new Teacher_Template Object </h1>
         <img id='ttcimage' src={require('../assets/bugsBunnyArtist.png')} alt=''></img>
@@ -95,7 +84,6 @@ onSubmit = (e) => {
           <Row>
             <Col md={6}>
             <Label>Username</Label>
->>>>>>> Stashed changes
             <Input
               name = "username"
               placeholder="Username"

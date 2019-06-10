@@ -35,34 +35,11 @@ onSubmit = (e) => {
       <Navigation />
       <div id='ctcpage'>
       <h1> Create a new Class_Template Object</h1>
-<<<<<<< Updated upstream
-      <div id='ctcimage_wrapper'>
-        <img id='ctcimage' src={require('../assets/bugsBunnyCarrot.png')} alt=''></img>
-      </div>
-      <div id='form'>
-      <Form>
-        <Row form>
-          <Col md={12}>
-          <FormGroup>
-              <Label>Class Title</Label>
-              <Input id='title'
-                name = "class_title"
-                //placeholder="Class Title"
-                value = {this.state.class_title}
-                onChange={e => this.change(e)}
-              />
-          </FormGroup>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
-=======
       <img id='ctcimage' src={require('../assets/bugsBunnyCarrot.png')} alt=''></img>
       <div id='ctcform'>
         <Form>
           <Row form>
             <Col md={12}>
->>>>>>> Stashed changes
             <FormGroup>
                 <Label>Class Title</Label>
                 <Input id='title'
@@ -89,24 +66,6 @@ onSubmit = (e) => {
                   />
               </FormGroup>
             </Col>
-<<<<<<< Updated upstream
-            <Col md={6}>
-              <FormGroup>
-              <Label>Skills</Label>
-              <Input
-                type = 'textarea'
-                name = "skills"
-                placeholder="Skills"
-                value = {this.state.skills}
-                onChange={e => this.change(e)}
-              />
-              </FormGroup>
-            </Col>
-        </Row>
- 
-        <button onClick={e => this.onSubmit(e)}>Submit</button>
-      </Form>
-=======
           </Row>
           <Row>
               <Col md={6}>
@@ -140,7 +99,7 @@ onSubmit = (e) => {
           <button onClick={e => this.onSubmit(e)}>Submit</button>
         </Form>
         </div>
->>>>>>> Stashed changes
+      
       </div>
     </div>
     );
