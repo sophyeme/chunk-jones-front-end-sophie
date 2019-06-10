@@ -25,7 +25,7 @@ onSubmit = (e) => {
     return(
     <div>
       <Navigation />
-      <h1> Delete a existing Program_Template Object </h1>
+      <h1> Delete a existing Teacher_Template Object </h1>
       <form>
         <input
           name = "teacher_id"

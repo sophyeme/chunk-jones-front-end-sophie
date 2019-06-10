@@ -24,6 +24,7 @@ import liveClassTemplateFormCreate from '../live_class_template/live_class_templ
 import liveClassTemplateFormDelete from '../live_class_template/live_class_template_delete';
 import liveProgramTemplateFormHome from '../live_program_template/live_program_template_home';
 import liveClassTemplateFormHome from '../live_class_template/live_class_template_home';
+import Home from '../pages/homePage'
 
 require('./login.css');
 
@@ -114,7 +115,7 @@ class LoginPage extends React.Component{
               <Redirect to="/"/>
             )
           )}/>
-          <Route exact path={ROUTES.HOME} component={Navigation} />
+          <Route exact path={ROUTES.HOME} component={Home} />
           <Route exact path={ROUTES.ptf} component={ProgramTemplateFormHome} />
           <Route exact path={ROUTES.ttf} component={TeacherTemplateFormHome} />
           <Route exact path={ROUTES.ctf} component={ClassTemplateFormHome} />
