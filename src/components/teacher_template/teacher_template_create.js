@@ -46,7 +46,7 @@ onSubmit = (e) => {
     <div>
       <Navigation />
       <div id='ttcpage'>
-        <h1> Create a new Teacher_Template Object </h1>
+        <h1> Create a new Teacher Object </h1>
         <img id='ttcimage' src={require('../assets/bugsBunnyArtist.png')} alt=''></img>
         <div id='ttcform'>
         <Form>
@@ -157,7 +157,6 @@ onSubmit = (e) => {
           <button onClick={e => this.onSubmit(e)}>Submit</button>
         </Form>
         <br/>
-        <text>Warner Bros. Trademarked</text>
         </div>
       </div>
     </div>
