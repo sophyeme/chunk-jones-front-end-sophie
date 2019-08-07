@@ -38,7 +38,7 @@ onSubmit = (e) => {
     <div>
       <Navigation />
       <h1> Delete a existing Teacher Object </h1>
-      <img id='ctdimage' src={require('../assets/elmerFudd.png')} alt=''></img>
+      <img id='ctdimage' src={require('../assets/ElmerFudd.png')} alt=''></img>
       <div>
       <form>
         <input
